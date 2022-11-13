@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="tittle">Welcome!</h1>
+    <h1 class="tittle">Let's Started!!</h1>
+    <div class="container">
+        <div class="form login" id="form">
+            <div class="content">
+                <h1>Login</h1>
+                <div class="group">
+                    <input type="text" id="email-login" class="inputText" placeholder="&nbsp;" required>
+                    <label for="email-login">Email</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="pass-login" class="inputText" placeholder="&nbsp;" required>
+                    <label for="pass-login">Password</label>
+                </div>
+                <div>
+                    <a class="diglog_btn" href="#my_dialog">Forgot the password ?</a>
+                </div>
+
+                <a href="../page/homepage.html" class="btn btn__link" >Login</a>
+
+            </div>
+            <div class="content">
+                <h1>Register</h1>
+                <div class="group">
+                    <input type="text" id="fullname-reg" class="inputText" placeholder="&nbsp;" required>
+                    <label for="fullname-reg">Full Name</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="email-reg" class="inputText" placeholder="&nbsp;" required>
+                    <label for="email-reg">Email</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="pass-reg" class="inputText" placeholder="&nbsp;" required>
+                    <label for="pass-reg">Password</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="repass-reg" class="inputText" placeholder="&nbsp;" required>
+                    <label for="repass-reg">Confirm Password</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">I have read and agree 
+                    <a href="">Privary Policy</a> , <a href="">Term of service</a> and <a href="">User Agreement</a> .
+                </div>
+                <a href="../page/homepage.html" class="btn btn__link" >Register</a>
+
+            </div>
+
+            <div class="form-rotate">
+                <div id="rotate"></div>
+            </div>
+            <div class="option">
+                <div class="bg-active" id="bg-active"></div>
+                <div class="changeType active" id="login">Login</div>
+                <div class="changeType" id="register">Register</div>
+            </div>
+        </div>
+        <div class="dialog overlay" id="my_dialog">
+            <div class="dialog_body">
+                <a class="dialog_close_btn" href="#">&times;</a>
+                <div >
+                    <i class="fa-solid fa-key"></i>
+                    <h4>FORGOT THE PASSWORD?</h4>
+                    <h4>Don't worry! We will send you intructions</h4>
+                    <label >Email</label>
+                    <input type="text" class="">
+                    <button>Reset password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+       <script src="script.js"></script>
+</body>
+</html>

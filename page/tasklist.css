@@ -1,0 +1,88 @@
+.app__tasklist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasklist__item {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasklist__item-title {
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    margin: 0em 0;
+    border-bottom: 1px solid black;
+    z-index: 100;
+}
+
+.tasklist__item-title h4 {
+    margin: 0.4em 0;
+}
+
+.tasklist__item-task {
+    display: flex;
+    width: 90%;
+    height: 10%;
+    border: 1px solid black;
+    padding: 0 2em;
+    border-radius: 0.7em;
+    margin-top: 3em;
+    align-items: center;
+    box-shadow: 5px 10px 20px rgb(48, 45, 45);
+}
+
+.task__info {
+    width: 90%;
+    height: 100%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+.task__title {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.task__date {
+    margin: 0.4em 0;
+}
+
+.task__options {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9%;
+}
+
+.task__edit {
+    margin: 0.7em 0;
+}
+.task__status, .task__edit, .task__delete{
+    transition: all 0.2s;
+}
+.task__status:hover, .task__edit:hover, .task__delete:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.task__edit:hover{
+    color: yellowgreen;
+}
+.task__delete:hover{
+    color: red;
+}
+.app__tasklist-planning .task__status:hover{
+    color: aqua;
+}
+.app__tasklist-uncompleted .task__status:hover{
+    color: green;
+}
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="listpage.css">
+    <link rel="stylesheet" href="../assets/php/header.css">
+    <!-- <link rel="stylesheet" href="./navbar.css"> -->
+    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./tasklist.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="box__search">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" required minlength="1">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+
+        <div class="header__logo">
+            <a href="/" class="logo">
+                <img src="/img/logo.jpg" alt="logo" >
+            </a>
+        </div>
+        <nav>
+            <ul class="nav__link">
+                <li>Help <i class="fa-solid fa-question"></i></li>
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="app__sidebar">
+        
+        <button class="dropdown-btn">
+            <i class="fa-solid fa-list"></i>
+            List 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <button class="dropdown-btn">
+            <i class="fa-regular fa-calendar-days"></i>
+            Calendar 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <button class="dropdown-btn">
+            <i class="fa-solid fa-chart-simple"></i>
+            Analyze 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <div class="sidebar__addtask">
+            <i class="fa-solid fa-circle-plus"></i>
+            <a class="diglog_btn" href="#add_tasks">Add tasks</a>
+        </div>
+    </div>
+    <div class="dialog add_tasks overlay" id="add_tasks">
+        <div class="dialog__add__body">
+            <a class="dialog_close_btn" href="#">&times;</a>
+            <input type="text" class="task__name" placeholder="Please enter the task name">
+            <div class="tasks__select">
+                <label for="projects">Project Name</label>
+
+                <select name="projects" id="projects">
+                    <option value="volvo">Project Name</option>
+                    <option value="saab">Testing</option>
+                </select>   
+            </div>
+            <div class="task__date__start">
+                <label for="birthday">Start date:</label>
+                <input type="date" >
+                <input type="time" >
+            </div>
+            <div class="task__date__end">
+                <label for="birthday">End date:</label>
+                <input type="date" >
+                <input type="time" >
+            </div>
+            <div class="task__add__note">
+                <label for="">Note:</label>
+                <input type="text">
+            </div>
+            <button>Create</button>
+        </div>
+    </div>
+    <div class="app__tasklist">
+        <div class="tasklist__item app__tasklist-planning">
+            <div class="tasklist__item-title">
+                <h4>PLANNING</h4>
+            </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Have trip
+                    </div>
+                    <div class="task__date">
+                        Start at: 23/03/27
+                    </div>
+                    <div class="task__note">
+                        Note: buy car
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="task__edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="task__delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Do homework
+                    </div>
+                    <div class="task__date">
+                        Start at: 27/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: do or not ?
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="task__edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="task__delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasklist__item app__tasklist-uncompleted">
+            <div class="tasklist__item-title">
+                <h4>UNCOMPLETED</h4>
+            </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Buy house
+                    </div>
+                    <div class="task__date">
+                        Deadline: 20:45 23/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: Make money
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="task__edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="task__delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasklist__item app__tasklist-completed">
+            <div class="tasklist__item-title">
+                <h4>COMPLETED</h4>
+            </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Don't have anything
+                    </div>
+                    <div class="task__date">
+                        Deadline: 20:45 23/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: alway done
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        <i class="fa-sharp fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="task__edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="task__delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+</body>
+</html>
